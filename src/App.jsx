@@ -44,7 +44,7 @@ function App() {
           </button>
         </div>
         <div className="hero-image">
-          <img src="/images/S__16564348_0.jpg" alt="筑波大学出身アスリート" />
+          <img src={`${import.meta.env.BASE_URL}images/S__16564348_0.jpg`} alt="筑波大学出身アスリート" />
           <div className="hero-image-caption">
             筑波大学蹴球部出身・元Jリーガー
           </div>
@@ -83,7 +83,7 @@ function App() {
         <h2 className="section-title">なぜ私たちが選ばれるのか</h2>
         <div className="solution-content">
           <div className="solution-image">
-            <img src="/images/S__16564346_0.png" alt="コンサルタント" />
+            <img src={`${import.meta.env.BASE_URL}images/S__16564346_0.png`} alt="コンサルタント" />
           </div>
           <div className="solution-features">
             <div className="feature-item">
@@ -117,13 +117,13 @@ function App() {
         <p className="section-subtitle">筑波大学出身の元トップアスリートがあなたを担当</p>
         <div className="consultants-grid">
           <div className="consultant-card">
-            <img src="/images/S__16564344_0.png" alt="池松 大騎" />
+            <img src={`${import.meta.env.BASE_URL}images/S__16564344_0.png`} alt="池松 大騎" />
             <h3>池松 大騎</h3>
             <p className="consultant-career">筑波大学蹴球部 → 元Jリーガー</p>
             <p className="consultant-message">「筑波で4年間サッカーに打ち込み、Jリーグでプレーした経験があります。引退後の不安、僕も同じでした。だからこそ、本気で寄り添えます。」</p>
           </div>
           <div className="consultant-card">
-            <img src="/images/S__16564345_0.jpg" alt="高橋 翔太" />
+            <img src={`${import.meta.env.BASE_URL}images/S__16564345_0.jpg`} alt="高橋 翔太" />
             <h3>高橋 翔太</h3>
             <p className="consultant-career">筑波大学陸上部 → 元実業団選手</p>
             <p className="consultant-message">「アスリートの強みは、企業が本当に求めているもの。それを言語化し、最高の転職を実現させます。」</p>
@@ -138,7 +138,7 @@ function App() {
         <div className="testimonials-grid">
           <div className="testimonial-card">
             <div className="testimonial-header">
-              <img src="/images/S__16564347_0.jpg" alt="転職成功者A" />
+              <img src={`${import.meta.env.BASE_URL}images/S__16564347_0.jpg`} alt="転職成功者A" />
               <div className="testimonial-info">
                 <h3>I.K さん（26歳）</h3>
                 <p>筑波大蹴球部 → J2 → 大手IT企業</p>
@@ -156,7 +156,7 @@ function App() {
           </div>
           <div className="testimonial-card">
             <div className="testimonial-header">
-              <img src="/images/S__16564349_0.jpg" alt="転職成功者B" />
+              <img src={`${import.meta.env.BASE_URL}images/S__16564349_0.jpg`} alt="転職成功者B" />
               <div className="testimonial-info">
                 <h3>M.T さん（29歳）</h3>
                 <p>筑波大蹴球部 → J1 → 外資系コンサル</p>
