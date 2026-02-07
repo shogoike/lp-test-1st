@@ -1,39 +1,66 @@
-import { useState } from 'react'
-import Header from './components/Header'
-import HeroSection from './components/HeroSection'
-import ReasonsSection from './components/ReasonsSection'
-import SuccessStoriesSection from './components/SuccessStoriesSection'
-import CTASection from './components/CTASection'
-import Footer from './components/Footer'
-import { CommercialTransaction, PrivacyPolicy } from './components/LegalPages'
+import { useState, useEffect } from 'react'
+import AthletePage from './pages/AthletePage'
+import NursePage from './pages/NursePage'
+import SalesPage from './pages/SalesPage'
 
 function App() {
-  const [activeModal, setActiveModal] = useState(null)
+  const [currentPage, setCurrentPage] = useState('athlete')
 
-  const openCommercial = () => setActiveModal('commercial')
-  const openPrivacy = () => setActiveModal('privacy')
-  const closeModal = () => setActiveModal(null)
+  // URLパラメータでページを切り替え
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const page = params.get('page')
+    if (page && ['athlete', 'nurse', 'sales'].includes(page)) {
+      setCurrentPage(page)
+    }
+  }, [])
+
+  // ページ切り替え
+  const pages = {
+    athlete: <AthletePage />,
+    nurse: <NursePage />,
+    sales: <SalesPage />,
+  }
 
   return (
-    <div className="min-h-screen">
-      <Header />
-      <HeroSection />
-      <ReasonsSection />
-      <SuccessStoriesSection />
-      <CTASection />
-      <Footer
-        onOpenCommercial={openCommercial}
-        onOpenPrivacy={openPrivacy}
-      />
+    <>
+      {/* ページ切り替えボタン（デモ用） */}
+      <div className="fixed bottom-4 right-4 z-50 flex flex-col gap-2 bg-white/90 backdrop-blur-sm p-3 rounded-xl shadow-lg border border-gray-200">
+        <p className="text-xs text-gray-500 font-medium mb-1">LP切替</p>
+        <button
+          onClick={() => setCurrentPage('athlete')}
+          className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+            currentPage === 'athlete'
+              ? 'bg-emerald-600 text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
+        >
+          アスリート
+        </button>
+        <button
+          onClick={() => setCurrentPage('nurse')}
+          className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+            currentPage === 'nurse'
+              ? 'bg-pink-600 text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
+        >
+          看護師
+        </button>
+        <button
+          onClick={() => setCurrentPage('sales')}
+          className={`px-3 py-1.5 text-xs font-medium rounded-lg transition-colors ${
+            currentPage === 'sales'
+              ? 'bg-blue-600 text-white'
+              : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+          }`}
+        >
+          営業
+        </button>
+      </div>
 
-      {/* Legal Modals */}
-      {activeModal === 'commercial' && (
-        <CommercialTransaction onClose={closeModal} />
-      )}
-      {activeModal === 'privacy' && (
-        <PrivacyPolicy onClose={closeModal} />
-      )}
-    </div>
+      {pages[currentPage]}
+    </>
   )
 }
 
