@@ -68,7 +68,7 @@ const stories = [
 
 function SuccessStoriesSection() {
   return (
-    <section className="py-20 lg:py-28 bg-navy-50">
+    <section id="success" className="py-20 lg:py-28 bg-navy-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
