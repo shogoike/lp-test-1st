@@ -2,7 +2,7 @@ import { ArrowRight, TrendingUp, Star } from 'lucide-react'
 
 const stories = [
   {
-    image: 'success1.jpg',
+    image: 'S__16564344_0.png',
     age: 32,
     gender: '男性',
     before: {
@@ -23,7 +23,7 @@ const stories = [
     comment: '書類添削で自分の強みが明確になり、面接でも自信を持って話せるようになりました。',
   },
   {
-    image: 'success2.jpg',
+    image: 'S__16564345_0.jpg',
     age: 35,
     gender: '女性',
     before: {
@@ -44,7 +44,7 @@ const stories = [
     comment: '担当者が最後まで寄り添ってくれたおかげで、理想以上の転職ができました。',
   },
   {
-    image: 'success3.jpg',
+    image: 'S__16564347_0.jpg',
     age: 38,
     gender: '男性',
     before: {

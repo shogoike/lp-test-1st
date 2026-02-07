@@ -68,7 +68,7 @@ function HeroSection() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gold-500/20 rounded-2xl blur-2xl" />
               <img
-                src={`${import.meta.env.BASE_URL}images/hero.jpg`}
+                src={`${import.meta.env.BASE_URL}images/S__16564348_0.jpg`}
                 alt="キャリアコンサルタント"
                 className="relative rounded-2xl shadow-2xl w-full object-cover"
               />

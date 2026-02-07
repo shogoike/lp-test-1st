@@ -61,7 +61,7 @@ function CTASection() {
           <div className="mt-12 bg-white/5 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/10">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <img
-                src={`${import.meta.env.BASE_URL}images/consultant.jpg`}
+                src={`${import.meta.env.BASE_URL}images/S__16564346_0.png`}
                 alt="キャリアコンサルタント"
                 className="w-20 h-20 rounded-full object-cover border-2 border-gold-400"
               />
